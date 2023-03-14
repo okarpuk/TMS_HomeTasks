@@ -5,6 +5,10 @@ VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeTasks_1_4", "HomeTasks_1_4\HomeTasks_1_4.csproj", "{5F9003A8-8980-45A9-9B4E-F0F83D7890F5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeTask_5_Phones_CreditCards", "HomeTask_5_Phones_CreditCards\HomeTask_5_Phones_CreditCards.csproj", "{A159AD44-EBE0-4754-A569-77EA6D833140}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeTask_6_Figures_Hospital", "HomeTask_6_Figures_Hospital\HomeTask_6_Figures_Hospital.csproj", "{BEFBD078-D180-4AB0-AE82-FECF6551A70A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{5F9003A8-8980-45A9-9B4E-F0F83D7890F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F9003A8-8980-45A9-9B4E-F0F83D7890F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F9003A8-8980-45A9-9B4E-F0F83D7890F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A159AD44-EBE0-4754-A569-77EA6D833140}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A159AD44-EBE0-4754-A569-77EA6D833140}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A159AD44-EBE0-4754-A569-77EA6D833140}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A159AD44-EBE0-4754-A569-77EA6D833140}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEFBD078-D180-4AB0-AE82-FECF6551A70A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEFBD078-D180-4AB0-AE82-FECF6551A70A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEFBD078-D180-4AB0-AE82-FECF6551A70A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEFBD078-D180-4AB0-AE82-FECF6551A70A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
