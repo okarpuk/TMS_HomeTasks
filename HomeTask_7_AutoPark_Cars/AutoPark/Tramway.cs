@@ -11,6 +11,7 @@ namespace HomeTask_7_AutoPark_Cars.AutoPark
         public Tramway(string destination, string route, string departureTime, int seatsQty) : base(destination, route, departureTime, seatsQty, "Uses rails")
         {
         }
+
         public override string TypeOfTransport()
         {
             return $"Tramway: this transport type {TransportType}";

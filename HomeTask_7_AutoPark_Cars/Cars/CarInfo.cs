@@ -18,7 +18,12 @@ namespace HomeTask_7_AutoPark_Cars.Cars
 
         public virtual void PrintVehicleInfo()
         {
-            Console.WriteLine($"Vehicle Type: {this.GetType().Name}: , Brand: {Brand}, LicensePlate: {LicensePlate}, MaxSpeed: {MaxSpeed}, MaxLoad: {GetMaxLoad()}");
+            Console.WriteLine($"Brand: {Brand}, LicensePlate: {LicensePlate}, MaxSpeed: {MaxSpeed}, MaxLoad: {GetMaxLoad()}");
+        }
+
+        public virtual void PrintVehicleInfo2()
+        {
+            Console.WriteLine($"Vehicle Type: {this.GetType().Name}, Brand: {Brand}, LicensePlate: {LicensePlate}, MaxSpeed: {MaxSpeed}, MaxLoad: {GetMaxLoad()}");
         }
 
         public abstract int GetMaxLoad();

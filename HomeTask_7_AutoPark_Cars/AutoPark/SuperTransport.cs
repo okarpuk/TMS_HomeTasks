@@ -10,6 +10,7 @@ namespace HomeTask_7_AutoPark_Cars.AutoPark
     public abstract class SuperTransport
     {
         public abstract string TypeOfTransport();
+
         public SuperTransport()
         {
         }
