@@ -1,0 +1,62 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/okarpuk/Projects/TMS_HomeTasks/HomeTask_8_Exception/HomeTask_8_Exception.csproj": {}
+  },
+  "projects": {
+    "/Users/okarpuk/Projects/TMS_HomeTasks/HomeTask_8_Exception/HomeTask_8_Exception.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/okarpuk/Projects/TMS_HomeTasks/HomeTask_8_Exception/HomeTask_8_Exception.csproj",
+        "projectName": "HomeTask_8_Exception",
+        "projectPath": "/Users/okarpuk/Projects/TMS_HomeTasks/HomeTask_8_Exception/HomeTask_8_Exception.csproj",
+        "packagesPath": "/Users/okarpuk/.nuget/packages/",
+        "outputPath": "/Users/okarpuk/Projects/TMS_HomeTasks/HomeTask_8_Exception/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/okarpuk/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.202/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
