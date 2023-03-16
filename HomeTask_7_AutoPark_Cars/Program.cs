@@ -22,29 +22,24 @@ namespace HomeTask_7_AutoPark_Cars
             cBus1.TransportInfo();
             Console.WriteLine(cBus1.TypeOfTransport());
             Console.WriteLine();
-
             //TROLLEY
             Trolleybus tBus1 = new Trolleybus("M-r West", "20", "10:00", 40);
             tBus1.TransportInfo();
             Console.WriteLine(tBus1.TypeOfTransport());
             Console.WriteLine();
-
             //TRAM
             Tramway tWay1 = new Tramway("Masherova", "41", "11:00", 50);
             tWay1.TransportInfo();
             Console.WriteLine(tWay1.TypeOfTransport());
             Console.WriteLine();
-
             //OBJECTS FOR ARRAY
             CityBus cBus2 = new CityBus("Gefest plant", "52", "12:00", 35);
             Trolleybus tBus2 = new Trolleybus("M-r North", "6", "13:00", 45);
             Tramway tWay2 = new Tramway("Pushkina", "17", "14:00", 55);
-
             //ARRAY
             PublicTransport[] allTransport = { cBus1, cBus2, tBus1, tBus2, tWay1, tWay2 };
             var orderBySeats = allTransport.OrderBy(seats => seats.SeatsQTY).ToArray();
             Array.ForEach(orderBySeats, Console.WriteLine);
-
             //ENTER DESTINATION AND TINE TO FIND TANSPORT
             Console.WriteLine("Enter destination");
             string? userDestination = Console.ReadLine();
@@ -57,7 +52,6 @@ namespace HomeTask_7_AutoPark_Cars
                     Console.WriteLine(string.Format("{0}, {1}, {2}", searchRoute.RouteNumber, searchRoute.Destination, searchRoute.DepartureTime));
                 }
             }
-
             //NEXT TRANSPORT
             Console.WriteLine("To find next routes enter one more departure time");
             string? userDepartureTime2 = Console.ReadLine();
@@ -87,7 +81,6 @@ namespace HomeTask_7_AutoPark_Cars
                 vehicle.PrintVehicleInfo();
             }
             Console.WriteLine();
-
             //PASSENGER CARS
             var passCar1 = new PassengerCar() { LicensePlate = "4444AA-1", Brand = "Geely", MaxSpeed = 160, MaxLoad = 500 };
             var passCar2 = new PassengerCar() { LicensePlate = "5555AA-1", Brand = "Audi", MaxSpeed = 180, MaxLoad = 600 };
@@ -104,7 +97,6 @@ namespace HomeTask_7_AutoPark_Cars
                 vehicle.PrintVehicleInfo();
             }
             Console.WriteLine();
-
             //FREIGHT CARS
             var freight1 = new FreightCar() { LicensePlate = "7777AA-1", Brand = "Volvo", MaxSpeed = 120, MaxLoad = 10000 };
             var freight2 = new FreightCar() { LicensePlate = "8888AA-1", Brand = "Scania", MaxSpeed = 140, MaxLoad = 12000 };
@@ -121,7 +113,6 @@ namespace HomeTask_7_AutoPark_Cars
                 vehicle.PrintVehicleInfo();
             }
             Console.WriteLine();
-
             //ALL VEHICLES
             List<CarInfo> allVehicles = new List<CarInfo>()
             {
