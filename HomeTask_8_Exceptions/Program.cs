@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Parameters.NewAutorization("Login", "Pas sw0rd", "Passw0rd");
         }
     }
 }
