@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace HomeTask_8_Exceptions
 {
-    internal class WrongLoginException
+    public class WrongLoginException : Exception
     {
+        public WrongLoginException() { }
+
+        public WrongLoginException(string exceptionMessage) : base(exceptionMessage) { }
     }
 }
