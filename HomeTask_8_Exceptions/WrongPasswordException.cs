@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace HomeTask_8_Exceptions
 {
-    internal class WrongPasswordException
+    public class WrongPasswordException : Exception
     {
+        public WrongPasswordException() { }
+
+        public WrongPasswordException(string exceptionMessage) : base(exceptionMessage) { }
     }
 }
+
