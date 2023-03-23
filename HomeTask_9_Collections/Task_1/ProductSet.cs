@@ -22,7 +22,7 @@ namespace HomeTask_9_Collections.Task_1
 
         public override void ProductInfo()
         {
-            Console.WriteLine($"PRODUCT SET DETAILS:\nProduct Set Name = {ProductSetName}, ProductSet Cost = {ProductSetCost}. \nSET CONTAINS:");
+            Console.WriteLine($"PRODUCT SET DETAILS:\nProduct Set Name = {ProductSetName}, ProductSet Cost = {ProductSetCost}. \n\nSET CONTAINS:");
             foreach (var unit in ProductsList)
             {
                 unit.ProductInfo();

@@ -14,59 +14,60 @@ namespace HomeTask_9_Collections.Task_1
             List<Product> productsList = new List<Product>()
             {
                 new Chocolate("Milka",10, new DateTime(2015, 7, 19), new DateTime(2022, 7, 20)),
-                new Chocolate("Toblerone",20, new DateTime(2013, 8, 19), new DateTime(2021, 8, 20)),
+                new Chocolate("Lindt",20, new DateTime(2013, 8, 19), new DateTime(2021, 8, 20)),
                 new Chocolate("Kommunarka",30, new DateTime(2017, 9, 19), new DateTime(2023, 9, 20)),
                 new Tea("Greengield",40, new DateTime(2016, 7, 20), new DateTime(2022, 7, 21)),
                 new Tea("Lipton",50, new DateTime(2014, 8, 20), new DateTime(2021, 8, 21)),
                 new Tea("Tess",60, new DateTime(2018, 9, 20), new DateTime(2023, 9, 21)),
             };
-
-            Console.WriteLine("\nLIST OF PRODUCTS:");
+            //ALL List
+            Console.WriteLine("\nLIST OF PRODUCTS 1:");
             foreach (var unit in productsList)
             {
                 unit.ProductInfo();
             }
-
-
+            //EXPIRED PRODUCTS
             Console.WriteLine($"\nATTENTION!!!\nThese products have expired:");
             var productExpired = from unit in productsList where unit.BestBeforeDate < DateTime.Now select unit;
             foreach (var unit in productExpired)
             {
                 unit.ProductInfo();
             }
-
-
-            Shipment batch = new Shipment("batch #1", productsList.First(), 100, 10);
+            //SHIPMENT
+            Shipment lot = new Shipment("LOT 1", productsList.First(), 100, 10);
             Console.WriteLine();
-            batch.ProductInfo();
-
-
-            ProductSet set = new ProductSet("set #1", 50, productsList.GetRange(2, 2));
+            lot.ProductInfo();
+            //SET
+            ProductSet set = new ProductSet("SET 1", 50, productsList.GetRange(2, 2));
             Console.WriteLine();
             set.ProductInfo();
-
-
-            productsList[2].Cost += 100;
-
-            productsList.Remove(productsList.Last());
-
-            foreach (var item in productsList)
+            //CHANGE PRICE
+            productsList[3].Cost += 100;
+            Console.WriteLine($"\nCHANGE PRICE:");
+            foreach (var unit in productsList)
             {
-                item.ProductInfo();
+                unit.ProductInfo();
             }
-
+            //REMOVE LAST PRODUCT
+            productsList.Remove(productsList.Last());
+            Console.WriteLine($"\nDELETE LAST:");
+            foreach (var unit in productsList)
+            {
+                unit.ProductInfo();
+            }
+            //CLEAR LIST
             productsList.Clear();
-
+            Console.WriteLine($"\nCLEAR LIST:");
+            foreach (var unit in productsList)
+            {
+                unit.ProductInfo();
+            }
         }
-
-
-
-        //
+        //TASK 1_2
         static public void Task_1_2()
         {
-            Console.WriteLine($"Product list:");
-
-            List<Product> productBase = new List<Product>()
+            Console.WriteLine($"\nLIST OF PRODUCTS 2:");
+            List<Product> productList = new List<Product>()
             {
                 new Coffee("Dallmayr",100, new DateTime(2015, 7, 19), new DateTime(2022, 7, 20)),
                 new Coffee("Lavazza",200, new DateTime(2013, 8, 19), new DateTime(2021, 8, 20)),
@@ -75,93 +76,66 @@ namespace HomeTask_9_Collections.Task_1
                 new Soda("Pepsi",500, new DateTime(2014, 8, 20), new DateTime(2021, 8, 21)),
                 new Soda("Fanta",600, new DateTime(2018, 9, 20), new DateTime(2023, 9, 21)),
             };
-
-            foreach (var item in productBase)
+            foreach (var unit in productList)
             {
-                item.ProductInfo();
+                unit.ProductInfo();
             }
-
-            var newCollection = from product in productBase where product.Cost > 300 select product;
-
-            var minValue = (from product in newCollection select product.Cost).Min();
-
-            Console.WriteLine($"Min value: {minValue}");
-
-
+            var newList = from item in productList where item.Cost > 300 select item;
+            var minCost = (from item in newList select item.Cost).Min();
+            Console.WriteLine($"\nMINIMUM COST: {minCost}");
         }
-
-
-        //
+        //TASK 1_3
         static public void Task_1_3()
         {
-            var people = new Dictionary<string, int>()
+            var delights = new Dictionary<string, int>()
             {
-                { "snickers",5},
-                { "mars",6},
-                { "dove",3},
-                { "bounty",8},
-                { "twix",1},
-                { "picnic",9}
+                { "Milka", 5 },
+                { "Lindt", 6 },
+                { "Lipton", 3 },
+                { "Lavazza", 8 },
+                { "Pepsi", 1 },
+                { "Fanta", 9 }
             };
-            ShowNameAndCounts(people);
-            ShowName(people);
-            ShowCounts(people);
-
-            var list = DictionaryToList(people);
+            NameCountInfo(delights);
+            NameInfo(delights);
+            CountInfo(delights);
+            var list = DictionaryToList(delights);
             ListToDictiobary(list);
-
         }
-
-
-        static void ShowNameAndCounts(Dictionary<string, int> people)
+        static void NameCountInfo(Dictionary<string, int> delights)
         {
-            foreach (var person in people)
+            Console.WriteLine("\nPAIR VALUE LIST:");
+            foreach (var unit in delights)
             {
-                Console.WriteLine($"Name: {person.Key}  Value: {person.Value}");
+                Console.WriteLine($"NAME: {unit.Key} \tCOUNT: {unit.Value}");
             }
         }
-
-        private static void ShowName(Dictionary<string, int> people)
+        private static void NameInfo(Dictionary<string, int> delights)
         {
-            List<string> keys = people.Keys.ToList();
+            List<string> keys = delights.Keys.ToList();
+            Console.WriteLine();
             foreach (var key in keys)
             {
-                Console.WriteLine($"Name: {key}");
+                Console.WriteLine($"NAME: {key}");
             }
         }
-
-        private static void ShowCounts(Dictionary<string, int> people)
+        private static void CountInfo(Dictionary<string, int> delights)
         {
-            List<int> values = people.Values.ToList();
+            List<int> values = delights.Values.ToList();
+            Console.WriteLine();
             foreach (var value in values)
             {
-                Console.WriteLine($"Count: {value}");
+                Console.WriteLine($"COUNT: {value}");
             }
         }
-
-        private static List<KeyValuePair<string, int>> DictionaryToList(Dictionary<string, int> people)
+        private static List<KeyValuePair<string, int>> DictionaryToList(Dictionary<string, int> delights)
         {
-            List<KeyValuePair<string, int>> persons = people.ToList();
-            return persons;
+            List<KeyValuePair<string, int>> units = delights.ToList();
+            return units;
         }
-
-        private static void ListToDictiobary(List<KeyValuePair<string, int>> persons)
+        private static void ListToDictiobary(List<KeyValuePair<string, int>> delights)
         {
-            Dictionary<string, int> people = new Dictionary<string, int>(persons);
+            Dictionary<string, int> people = new Dictionary<string, int>(delights);
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }

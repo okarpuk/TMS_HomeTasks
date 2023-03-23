@@ -12,26 +12,22 @@ namespace HomeTask_9_Collections.Task_1
     internal class Shipment : Product
     {
         public string ShipmentName { get; set; }
-        public Product Brand { get; set; }
+        public Product Product { get; set; }
         public int ShipmentCost { get; set; }
         public int Quantity { get; set; }
-
-        public Shipment(string shipmentname, Product brand, int shipmentcost, int quantity)
+        
+        public Shipment(string shipmentname, Product product, int shipmentcost, int quantity)
         {
             ShipmentName = shipmentname;
-            Brand = brand;
+            Product = product;
             ShipmentCost = shipmentcost;
             Quantity = quantity;
         }
-
-        public Shipment()
-        {
-        }
-
+        
         public override void ProductInfo()
         {
-            Console.WriteLine($"SHIPMENT INFO:\nShipment Name = {ShipmentName}, Shipment Cost = {ShipmentCost}, Quantity = {Quantity}. \nSHIPMENT PRODUCTS DETAILS:");
-            base.ProductInfo();
+            Console.WriteLine($"SHIPMENT INFO:\nShipment Name = {ShipmentName}, Shipment Cost = {ShipmentCost}, Quantity = {Quantity}. \n\nSHIPMENT PRODUCTS DETAILS:");
+            Product.ProductInfo();
         }
     }
 }

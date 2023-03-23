@@ -17,6 +17,5 @@ namespace HomeTask_9_Collections.Task_1
         {
             Console.WriteLine($"Information about product: {base.ProductInfo}");
         }
-
     }
 }

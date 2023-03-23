@@ -13,7 +13,7 @@ namespace HomeTask_9_Collections.Task_1
         public int Cost { get; set; }
         public DateTime DateOfManufacture { get; set; }
         public DateTime BestBeforeDate { get; set; }
-
+        
         public Product(string brand, int cost, DateTime dateOfManufacture, DateTime bestBeforeDate)
         {
             Brand = brand;
@@ -21,20 +21,19 @@ namespace HomeTask_9_Collections.Task_1
             DateOfManufacture = dateOfManufacture;
             BestBeforeDate = bestBeforeDate;
         }
-
+        
         public Product()
         {
         }
-
+        
         public virtual void ProductInfo()
         {
-            Console.WriteLine($"Brand = {Brand}, Cost = {Cost}, Date Of Manufacture = {DateOfManufacture.ToString("dd/MM/yyyy")}, Best before date = {BestBeforeDate.ToString("dd/MM/yyyy")}, Profuct Expired ={ProductExpired()}");
+            Console.WriteLine($"Brand = {Brand}, Cost = {Cost}, Date Of Manufacture = {DateOfManufacture.ToString("dd/MM/yyyy")}, Best before date = {BestBeforeDate.ToString("dd/MM/yyyy")}, Product Expired ={ProductExpired()}");
         }
-
+        
         public bool ProductExpired()
         {
             return this.BestBeforeDate < DateTime.Today;
         }
-
     }
 }

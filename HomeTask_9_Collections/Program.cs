@@ -15,7 +15,6 @@ namespace HomeTask_9_Collections
         {
             Task_0_1.arrayException();
             Task_0_2.codesList();
-
             ProductsList.Task_1_1();
             ProductsList.Task_1_2();
             ProductsList.Task_1_3();
