@@ -18,7 +18,7 @@ namespace HomeTask_9_Collections.Task_0
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error! Exception: {ex.Message}");
+                Console.WriteLine($"ATTENTION!\nException: {ex.Message}");
             }
         }
     }

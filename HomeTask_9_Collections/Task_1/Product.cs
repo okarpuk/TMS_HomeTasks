@@ -14,10 +14,10 @@ namespace HomeTask_9_Collections.Task_1
         public DateTime DateOfManufacture { get; set; }
         public DateTime BestBeforeDate { get; set; }
 
-        public Product(string name, int price, DateTime dateOfManufacture, DateTime bestBeforeDate)
+        public Product(string brand, int cost, DateTime dateOfManufacture, DateTime bestBeforeDate)
         {
-            Brand = name;
-            Cost = price;
+            Brand = brand;
+            Cost = cost;
             DateOfManufacture = dateOfManufacture;
             BestBeforeDate = bestBeforeDate;
         }

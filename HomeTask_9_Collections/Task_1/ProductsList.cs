@@ -11,50 +11,51 @@ namespace HomeTask_9_Collections.Task_1
     {
         public static void Task_1_1()
         {
-            List<Product> productBase = new List<Product>()
+            List<Product> productsList = new List<Product>()
             {
-                    new Fruit("apple",10, new DateTime(2015, 7, 19), new DateTime(2022, 7, 20)),
-                    new Fruit("lemon",20, new DateTime(2013, 8, 19), new DateTime(2021, 8, 20)),
-                    new Fruit("pear",30, new DateTime(2017, 9, 19), new DateTime(2023, 9, 20)),
-                    new Vegetable("tomato",40, new DateTime(2016, 7, 20), new DateTime(2022, 7, 21)),
-                    new Vegetable("cucumber",50, new DateTime(2014, 8, 20), new DateTime(2021, 8, 21)),
-                    new Vegetable("pepper",60, new DateTime(2018, 9, 20), new DateTime(2023, 9, 21)),
+                new Chocolate("Milka",10, new DateTime(2015, 7, 19), new DateTime(2022, 7, 20)),
+                new Chocolate("Toblerone",20, new DateTime(2013, 8, 19), new DateTime(2021, 8, 20)),
+                new Chocolate("Kommunarka",30, new DateTime(2017, 9, 19), new DateTime(2023, 9, 20)),
+                new Tea("Greengield",40, new DateTime(2016, 7, 20), new DateTime(2022, 7, 21)),
+                new Tea("Lipton",50, new DateTime(2014, 8, 20), new DateTime(2021, 8, 21)),
+                new Tea("Tess",60, new DateTime(2018, 9, 20), new DateTime(2023, 9, 21)),
             };
 
-            foreach (var item in productBase)
+            Console.WriteLine("\nLIST OF PRODUCTS:");
+            foreach (var unit in productsList)
             {
-                item.ProductInfo();
+                unit.ProductInfo();
             }
 
 
-            Console.WriteLine($"\nThese products are expired:");
-            var expiredItems = from item in productBase where item.BestBeforeDate < DateTime.Now select item;
-            foreach (var item in expiredItems)
+            Console.WriteLine($"\nATTENTION!!!\nThese products have expired:");
+            var productExpired = from unit in productsList where unit.BestBeforeDate < DateTime.Now select unit;
+            foreach (var unit in productExpired)
             {
-                item.ProductInfo();
+                unit.ProductInfo();
             }
 
 
-            Сonsignment batch = new Сonsignment("batch #1", productBase.First(), 100, 10);
+            Shipment batch = new Shipment("batch #1", productsList.First(), 100, 10);
             Console.WriteLine();
-            batch.ShowInfo();
+            batch.ProductInfo();
 
 
-            ProductKit kit = new ProductKit("kit #1", 50, productBase.GetRange(2, 2));
+            ProductSet set = new ProductSet("set #1", 50, productsList.GetRange(2, 2));
             Console.WriteLine();
-            kit.ShowInfo();
+            set.ProductInfo();
 
 
-            productBase[2].Cost += 100;
+            productsList[2].Cost += 100;
 
-            productBase.Remove(productBase.Last());
+            productsList.Remove(productsList.Last());
 
-            foreach (var item in productBase)
+            foreach (var item in productsList)
             {
                 item.ProductInfo();
             }
 
-            productBase.Clear();
+            productsList.Clear();
 
         }
 
@@ -67,12 +68,12 @@ namespace HomeTask_9_Collections.Task_1
 
             List<Product> productBase = new List<Product>()
             {
-                new Fruit("snickers",100, new DateTime(2015, 7, 19), new DateTime(2022, 7, 20)),
-                new Fruit("mars",200, new DateTime(2013, 8, 19), new DateTime(2021, 8, 20)),
-                new Fruit("dove",300, new DateTime(2017, 9, 19), new DateTime(2023, 9, 20)),
-                new Vegetable("bounty",400, new DateTime(2016, 7, 20), new DateTime(2022, 7, 21)),
-                new Vegetable("twix",500, new DateTime(2014, 8, 20), new DateTime(2021, 8, 21)),
-                new Vegetable("picnic",600, new DateTime(2018, 9, 20), new DateTime(2023, 9, 21)),
+                new Coffee("Dallmayr",100, new DateTime(2015, 7, 19), new DateTime(2022, 7, 20)),
+                new Coffee("Lavazza",200, new DateTime(2013, 8, 19), new DateTime(2021, 8, 20)),
+                new Coffee("Jacobs",300, new DateTime(2017, 9, 19), new DateTime(2023, 9, 20)),
+                new Soda("CocaCola",400, new DateTime(2016, 7, 20), new DateTime(2022, 7, 21)),
+                new Soda("Pepsi",500, new DateTime(2014, 8, 20), new DateTime(2021, 8, 21)),
+                new Soda("Fanta",600, new DateTime(2018, 9, 20), new DateTime(2023, 9, 21)),
             };
 
             foreach (var item in productBase)
@@ -110,10 +111,6 @@ namespace HomeTask_9_Collections.Task_1
             ListToDictiobary(list);
 
         }
-
-
-
-
 
 
         static void ShowNameAndCounts(Dictionary<string, int> people)

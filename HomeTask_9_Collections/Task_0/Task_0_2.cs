@@ -11,7 +11,7 @@ namespace HomeTask_9_Collections.Task_0
     {
         public static void codesList()
         {
-            Console.WriteLine("\nPhone codes:");
+            Console.WriteLine("\nPHONE CODES:");
             var phoneCodes = new Dictionary<int, string>()
             {
                 { 1, "USA"},
