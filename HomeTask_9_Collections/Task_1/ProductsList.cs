@@ -13,15 +13,15 @@ namespace HomeTask_9_Collections.Task_1
         {
             List<Product> productsList = new List<Product>()
             {
-                new Chocolate("Milka",10, new DateTime(2015, 7, 19), new DateTime(2022, 7, 20)),
-                new Chocolate("Lindt",20, new DateTime(2013, 8, 19), new DateTime(2021, 8, 20)),
-                new Chocolate("Kommunarka",30, new DateTime(2017, 9, 19), new DateTime(2023, 9, 20)),
-                new Tea("Greengield",40, new DateTime(2016, 7, 20), new DateTime(2022, 7, 21)),
-                new Tea("Lipton",50, new DateTime(2014, 8, 20), new DateTime(2021, 8, 21)),
-                new Tea("Tess",60, new DateTime(2018, 9, 20), new DateTime(2023, 9, 21)),
+                new Chocolate("Milka",11, new DateTime(2022, 6, 15), new DateTime(2024, 6, 14)),
+                new Chocolate("Lindt",10, new DateTime(2020, 11, 20), new DateTime(2021, 11, 19)),
+                new Chocolate("Kommunarka",5, new DateTime(2022, 12, 11), new DateTime(2024, 12, 10)),
+                new Tea("Greengield",10, new DateTime(2019, 12, 31), new DateTime(2022, 12, 30)),
+                new Tea("Lipton",12, new DateTime(2017, 1, 1), new DateTime(2020, 1, 1)),
+                new Tea("Tess",8, new DateTime(2023, 1, 1), new DateTime(2026, 1, 1)),
             };
             //ALL List
-            Console.WriteLine("\nLIST OF PRODUCTS 1:");
+            Console.WriteLine("\nLIST OF PRODUCTS #1:");
             foreach (var unit in productsList)
             {
                 unit.ProductInfo();
@@ -34,11 +34,11 @@ namespace HomeTask_9_Collections.Task_1
                 unit.ProductInfo();
             }
             //SHIPMENT
-            Shipment lot = new Shipment("LOT 1", productsList.First(), 100, 10);
+            Shipment lot = new Shipment("LOT 1", productsList.First(), 500, 32);
             Console.WriteLine();
             lot.ProductInfo();
             //SET
-            ProductSet set = new ProductSet("SET 1", 50, productsList.GetRange(2, 2));
+            ProductSet set = new ProductSet("SET 1", 20, productsList.GetRange(3, 3));
             Console.WriteLine();
             set.ProductInfo();
             //CHANGE PRICE
@@ -66,15 +66,15 @@ namespace HomeTask_9_Collections.Task_1
         //TASK 1_2
         static public void Task_1_2()
         {
-            Console.WriteLine($"\nLIST OF PRODUCTS 2:");
+            Console.WriteLine($"\nLIST OF PRODUCTS #2:");
             List<Product> productList = new List<Product>()
             {
-                new Coffee("Dallmayr",100, new DateTime(2015, 7, 19), new DateTime(2022, 7, 20)),
-                new Coffee("Lavazza",200, new DateTime(2013, 8, 19), new DateTime(2021, 8, 20)),
-                new Coffee("Jacobs",300, new DateTime(2017, 9, 19), new DateTime(2023, 9, 20)),
-                new Soda("CocaCola",400, new DateTime(2016, 7, 20), new DateTime(2022, 7, 21)),
-                new Soda("Pepsi",500, new DateTime(2014, 8, 20), new DateTime(2021, 8, 21)),
-                new Soda("Fanta",600, new DateTime(2018, 9, 20), new DateTime(2023, 9, 21)),
+                new Coffee("Dallmayr",400, new DateTime(2020, 6, 11), new DateTime(2024, 1, 11)),
+                new Coffee("Lavazza",100, new DateTime(2020, 4, 22), new DateTime(2023, 7, 5)),
+                new Coffee("Jacobs",200, new DateTime(2021, 2, 23), new DateTime(2025, 12, 12)),
+                new Soda("CocaCola",500, new DateTime(2019, 1, 12), new DateTime(2024, 4, 4)),
+                new Soda("Pepsi",800, new DateTime(2020, 12, 12), new DateTime(2022, 12, 11)),
+                new Soda("Fanta",900, new DateTime(2021, 3, 2), new DateTime(2023, 3, 3)),
             };
             foreach (var unit in productList)
             {
@@ -89,12 +89,12 @@ namespace HomeTask_9_Collections.Task_1
         {
             var delights = new Dictionary<string, int>()
             {
-                { "Milka", 5 },
-                { "Lindt", 6 },
-                { "Lipton", 3 },
-                { "Lavazza", 8 },
-                { "Pepsi", 1 },
-                { "Fanta", 9 }
+                { "Milka", 23 },
+                { "Lindt", 61 },
+                { "Lipton", 32 },
+                { "Lavazza", 48 },
+                { "Pepsi", 101 },
+                { "Fanta", 95 }
             };
             NameCountInfo(delights);
             NameInfo(delights);
@@ -104,7 +104,7 @@ namespace HomeTask_9_Collections.Task_1
         }
         static void NameCountInfo(Dictionary<string, int> delights)
         {
-            Console.WriteLine("\nPAIR VALUE LIST:");
+            Console.WriteLine("\nNAME AND COUNT LIST:");
             foreach (var unit in delights)
             {
                 Console.WriteLine($"NAME: {unit.Key} \tCOUNT: {unit.Value}");
@@ -113,7 +113,7 @@ namespace HomeTask_9_Collections.Task_1
         private static void NameInfo(Dictionary<string, int> delights)
         {
             List<string> keys = delights.Keys.ToList();
-            Console.WriteLine();
+            Console.WriteLine("\nNAMES LIST:");
             foreach (var key in keys)
             {
                 Console.WriteLine($"NAME: {key}");
@@ -122,7 +122,7 @@ namespace HomeTask_9_Collections.Task_1
         private static void CountInfo(Dictionary<string, int> delights)
         {
             List<int> values = delights.Values.ToList();
-            Console.WriteLine();
+            Console.WriteLine("\nCOUNTS LIST:");
             foreach (var value in values)
             {
                 Console.WriteLine($"COUNT: {value}");
@@ -135,7 +135,7 @@ namespace HomeTask_9_Collections.Task_1
         }
         private static void ListToDictiobary(List<KeyValuePair<string, int>> delights)
         {
-            Dictionary<string, int> people = new Dictionary<string, int>(delights);
+            Dictionary<string, int> myDict = new Dictionary<string, int>(delights);
         }
     }
 }
