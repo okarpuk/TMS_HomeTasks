@@ -20,12 +20,14 @@ namespace HomeTask_9_Collections.Task_1
                 new Tea("Lipton",12, new DateTime(2017, 1, 1), new DateTime(2020, 1, 1)),
                 new Tea("Tess",8, new DateTime(2023, 1, 1), new DateTime(2026, 1, 1)),
             };
+
             //ALL List
             Console.WriteLine("\nLIST OF PRODUCTS #1:");
             foreach (var unit in productsList)
             {
                 unit.ProductInfo();
             }
+
             //EXPIRED PRODUCTS
             Console.WriteLine($"\nATTENTION!!!\nThese products have expired:");
             var productExpired = from unit in productsList where unit.BestBeforeDate < DateTime.Now select unit;
@@ -33,14 +35,17 @@ namespace HomeTask_9_Collections.Task_1
             {
                 unit.ProductInfo();
             }
+
             //SHIPMENT
             Shipment lot = new Shipment("LOT 1", productsList.First(), 500, 32);
             Console.WriteLine();
             lot.ProductInfo();
+
             //SET
             ProductSet set = new ProductSet("SET 1", 20, productsList.GetRange(3, 3));
             Console.WriteLine();
             set.ProductInfo();
+
             //CHANGE PRICE
             productsList[3].Cost += 100;
             Console.WriteLine($"\nCHANGE PRICE:");
@@ -48,6 +53,7 @@ namespace HomeTask_9_Collections.Task_1
             {
                 unit.ProductInfo();
             }
+
             //REMOVE LAST PRODUCT
             productsList.Remove(productsList.Last());
             Console.WriteLine($"\nDELETE LAST:");
@@ -55,6 +61,7 @@ namespace HomeTask_9_Collections.Task_1
             {
                 unit.ProductInfo();
             }
+
             //CLEAR LIST
             productsList.Clear();
             Console.WriteLine($"\nCLEAR LIST:");
@@ -63,6 +70,7 @@ namespace HomeTask_9_Collections.Task_1
                 unit.ProductInfo();
             }
         }
+
         //TASK 1_2
         static public void Task_1_2()
         {
@@ -84,6 +92,7 @@ namespace HomeTask_9_Collections.Task_1
             var minCost = (from item in newList select item.Cost).Min();
             Console.WriteLine($"\nMINIMUM COST: {minCost}");
         }
+
         //TASK 1_3
         static public void Task_1_3()
         {
@@ -102,6 +111,7 @@ namespace HomeTask_9_Collections.Task_1
             var list = DictionaryToList(delights);
             ListToDictiobary(list);
         }
+
         static void NameCountInfo(Dictionary<string, int> delights)
         {
             Console.WriteLine("\nNAME AND COUNT LIST:");
@@ -110,6 +120,7 @@ namespace HomeTask_9_Collections.Task_1
                 Console.WriteLine($"NAME: {unit.Key} \tCOUNT: {unit.Value}");
             }
         }
+
         private static void NameInfo(Dictionary<string, int> delights)
         {
             List<string> keys = delights.Keys.ToList();
@@ -119,6 +130,7 @@ namespace HomeTask_9_Collections.Task_1
                 Console.WriteLine($"NAME: {key}");
             }
         }
+
         private static void CountInfo(Dictionary<string, int> delights)
         {
             List<int> values = delights.Values.ToList();
@@ -128,6 +140,7 @@ namespace HomeTask_9_Collections.Task_1
                 Console.WriteLine($"COUNT: {value}");
             }
         }
+
         private static List<KeyValuePair<string, int>> DictionaryToList(Dictionary<string, int> delights)
         {
             List<KeyValuePair<string, int>> units = delights.ToList();

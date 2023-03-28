@@ -27,7 +27,7 @@ namespace HomeTask_9_Collections.Task_0
             };
             foreach (var countryCode in phoneCodes)
             {
-                Console.WriteLine($"Phone code: {countryCode.Key}  Country: {countryCode.Value}");
+                Console.WriteLine($"Phone code: {countryCode.Key}\tCountry: {countryCode.Value}");
             }
         }
     }
