@@ -8,13 +8,8 @@ namespace HomeTask_10_Generic.Cars
 {
     internal class ElectricalMotor : Motor
     {
-        public override void myMotion()
-        {
-            Console.WriteLine("ELECTRICAL CAR MOTION");
-        }
-        public override void myRefuel()
-        {
-            Console.WriteLine("ELECTRICAL CAR REFUEL");
-        }
+        public override void myMotion() => Console.WriteLine("ELECTRICAL CAR MOTION");
+
+        public override void myRefuel() => Console.WriteLine("ELECTRICAL CAR REFUEL");
     }
 }

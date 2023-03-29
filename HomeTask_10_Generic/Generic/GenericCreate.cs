@@ -9,10 +9,12 @@ namespace HomeTask_10_Generic.Generic
     public class Generic<T>
     {
         public T[] myArray;
+
         public Generic()
         {
             myArray = Array.Empty<T>();
         }
+
         //ADD ELEMENT
         public void AddNewElement(T element)
         {
@@ -24,6 +26,7 @@ namespace HomeTask_10_Generic.Generic
             arrayOne[myArray.Length] = element;
             myArray = arrayOne;
         }
+
         //DELETE ELEMENT
         public void DeleteElement(T element)
         {
@@ -49,6 +52,7 @@ namespace HomeTask_10_Generic.Generic
                 myArray = arrayTwo;
             }
         }
+
         //FIND ELEMENT
         public void FindElement(int element)
         {
@@ -74,6 +78,7 @@ namespace HomeTask_10_Generic.Generic
                 Console.WriteLine($"\n{ex.Message}");
             }
         }
+
         //ARRAY LENGTH
         public int ArrayLength()
         {

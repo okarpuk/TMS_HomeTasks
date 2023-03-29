@@ -9,6 +9,7 @@ namespace HomeTask_10_Generic.Cars
     public abstract class Motor
     {
         public abstract void myMotion();
+
         public abstract void myRefuel();
     }
 }

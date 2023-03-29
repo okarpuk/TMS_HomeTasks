@@ -10,19 +10,23 @@ namespace HomeTask_10_Generic.Point
     {
         private T x;
         private T y;
+
         public T X
         {
             get => x;
         }
+
         public T Y
         {
             get => y;
         }
+
         public Point(T x, T y)
         {
             this.x = x;
             this.y = y;
         }
+
         public void GetDistance(Point<T> pointOne, Point<T> pointTwo)
         {
             double x1 = Convert.ToDouble(pointOne.x);
