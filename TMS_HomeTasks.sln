@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeTask_7_AutoPark_Cars", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeTask_8_Exceptions", "HomeTask_8_Exceptions\HomeTask_8_Exceptions.csproj", "{BC30FA39-B017-49AC-B676-FE6A99A6E05D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeTask_9_Collections", "HomeTask_9_Collections\HomeTask_9_Collections.csproj", "{6FC16E29-CD37-420F-B991-FCC44C99F8F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeTask_9_Collections", "HomeTask_9_Collections\HomeTask_9_Collections.csproj", "{6FC16E29-CD37-420F-B991-FCC44C99F8F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeTask_10_Generic", "HomeTask_10_Generic\HomeTask_10_Generic.csproj", "{A1C328B1-D326-4D44-982F-4D09523742A2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{6FC16E29-CD37-420F-B991-FCC44C99F8F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6FC16E29-CD37-420F-B991-FCC44C99F8F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6FC16E29-CD37-420F-B991-FCC44C99F8F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1C328B1-D326-4D44-982F-4D09523742A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1C328B1-D326-4D44-982F-4D09523742A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1C328B1-D326-4D44-982F-4D09523742A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1C328B1-D326-4D44-982F-4D09523742A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
