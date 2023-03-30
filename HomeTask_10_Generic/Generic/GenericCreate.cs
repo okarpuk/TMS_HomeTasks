@@ -15,6 +15,11 @@ namespace HomeTask_10_Generic.Generic
             myArray = Array.Empty<T>();
         }
 
+        public Generic(T[] myArray)
+        {
+            this.myArray = myArray;
+        }
+
         //ADD ELEMENT
         public void AddNewElement(T element)
         {
