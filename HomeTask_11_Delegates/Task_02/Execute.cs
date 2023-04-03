@@ -14,7 +14,6 @@ namespace HomeTask_11_Delegates.Task_02
             Monitoring tracking = new Monitoring();
             Subscriber_1 subscriber1 = new Subscriber_1(tracking);
             Subscriber_2 subscriber2 = new Subscriber_2(tracking);
-
             tracking.PriceToGet();
             tracking.PriceToGet();
             subscriber2.NoNotify();
