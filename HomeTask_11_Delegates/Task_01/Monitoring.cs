@@ -21,9 +21,6 @@ namespace HomeTask_11_Delegates.Task_01
 
         public static void PriceDisplay() => priceShowing(calculatedPrice);
 
-        private static void PriceToGet()
-        {
-            calculatedPrice = (int)new RandomPrice().CreatePrice(generatedPricesQTY).Average();
-        }
+        private static void PriceToGet() => calculatedPrice = (int)new RandomPrice().CreatePrice(generatedPricesQTY).Average();
     }
 }

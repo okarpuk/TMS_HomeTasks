@@ -16,14 +16,8 @@ namespace HomeTask_11_Delegates.Task_02
             tracking.SubscriberAdding(this);
         }
 
-        public void Refresh(int price)
-        {
-            Console.WriteLine($"SUBSCRIBER #1 NOTIFIED THAT PRICE IS LOWER THAN 20000 AND IS {price}");
-        }
+        public void Refresh(int price) => Console.WriteLine($"SUBSCRIBER #1 NOTIFIED THAT PRICE IS LOWER THAN 20000 AND IS {price}");
 
-        public void Notify()
-        {
-            tracking.SubscriberAdding(this);
-        }
+        public void Notify() => tracking.SubscriberAdding(this);
     }
 }

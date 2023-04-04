@@ -14,9 +14,6 @@ namespace HomeTask_11_Delegates.Task_01
             Monitoring.PriceDisplay();
         }
 
-        public static void MonitoringDisplay(int result)
-        {
-            Console.WriteLine($"\nAVERAGE PRICE IS: {result}");
-        }
+        public static void MonitoringDisplay(int result) => Console.WriteLine($"\nAVERAGE PRICE IS: {result}");
     }
 }

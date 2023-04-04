@@ -33,15 +33,9 @@ namespace HomeTask_11_Delegates.Task_02
             Console.WriteLine();
         }
 
-        public void SubscriberAdding(ISubscriber subscriber)
-        {
-            subscribers.Add(subscriber);
-        }
+        public void SubscriberAdding(ISubscriber subscriber) => subscribers.Add(subscriber);
 
-        public void SubscriberDeleting(ISubscriber subscriber)
-        {
-            subscribers.Remove(subscriber);
-        }
+        public void SubscriberDeleting(ISubscriber subscriber) => subscribers.Remove(subscriber);
 
         public void InformSubscribers()
         {
